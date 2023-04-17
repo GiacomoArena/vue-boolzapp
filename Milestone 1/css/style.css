@@ -25,12 +25,39 @@ main{
   height: 95%;
 }
 .side-container{
-  background-color: red;
+  background-color: white;
   width: 30%;
   max-width: 450px;
+  border: 1px solid #D5D5D4;
 }
 .container{
-  background-color: blue;
+  background-color: white;
   width: 50%;
   max-width: 750px;
+  border: 1px solid #D5D5D4;
+}
+.utility{
+  display: flex;
+  flex-direction: column;
+}
+.user img{
+  width: 40px;
+  border-radius: 50%;
+}
+.user {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+}
+.user span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.user span i{
+  color: #B1B1B1;
+  margin: 0 5px;
+  cursor: pointer;
 }
