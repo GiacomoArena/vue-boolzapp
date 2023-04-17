@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  width: 100vh;
+  height: 100vh;
+  background: rgb(218,219,211);
+  background: linear-gradient(0deg, rgba(218,219,211,1) 80%, rgba(0,150,136,1) 80%, rgba(0,150,136,1) 100%); 
+}
