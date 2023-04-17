@@ -7,7 +7,9 @@
 .flex{
   display: flex;
 }
-
+.clicked{
+  background-color: #d308c9;
+}
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 100vh;
@@ -135,7 +137,6 @@ main{
 .contact{
   padding: 5px 0;
   display: flex;
-  background-color: white;
   border: 1px solid #EAEAEA;
   cursor: pointer;
 }

@@ -70,6 +70,7 @@
             <section 
             @click="nowChat(contact, i)"
             class="contact"
+            :class="{clicked: contact.click}"
             >
               <!-- dynamic contact img -->
               <img :src="contact.avatar" alt="user">
