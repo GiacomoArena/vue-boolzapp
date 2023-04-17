@@ -25,7 +25,7 @@
 
             <section class="user">
               <!--user img -->
-              <div>
+              <div class="flex">
                 <img src="/img/avatar_io.jpg" alt="user">
                 <span>Sofia</span>
               </div>
@@ -71,7 +71,7 @@
               <!-- dynamic contact img -->
               <img :src="contact.avatar" alt="user">
               <div>
-                <h4>{{contact.name}}</h3>
+                <h4>{{contact.name}}</h4>
                 <p>Ultimo messaggio inviato</p>
               </div>
               <!-- last message clock -->
@@ -85,8 +85,45 @@
         </div>
   <!-- //////// contacts ///////// -->
         <div class="container">
-          gigio
+          
+          <section class="main-avatar">
+            <!--user img -->
+            <section class="flex">
+              <img src="/img/avatar_1.jpg" alt="user">
+              <div>
+                <h4>Michele</h4>
+                <p>Ultimo accesso oggi alle 12:00</p>
+              </div>
+            </section>
+            
+            <span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </span>
+          </section> 
+
+          <section class="main-chat">
+
+          </section>
+<!-- //////////bottom bar////////// -->
+          <section class="bottom-chat-bar">
+
+            <span>
+              <i class="fa-regular fa-face-smile"></i>
+            </span>
+
+            <input type="text" placeholder="  Scrivi un messaggio ">
+
+            <span>
+              <i class="fa-solid fa-microphone"></i>
+            </span>
+
+          </section>
         </div>
+
+        
+
       </section>
       
       

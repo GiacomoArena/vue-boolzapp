@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.flex{
+  display: flex;
+}
+
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 100vh;
@@ -11,6 +15,7 @@ body{
   background: linear-gradient(0deg, rgba(218,219,211,1) 80%, rgba(0,150,136,1) 80%, rgba(0,150,136,1) 100%); 
   background-repeat: no-repeat;
 }
+
 main{
   width: 100%;
   height: 100%;
@@ -39,6 +44,7 @@ main{
   flex-direction: column;
 }
 .user img{
+  margin-left: 10px;
   width: 40px;
   border-radius: 50%;
 }
@@ -48,9 +54,7 @@ main{
   justify-content: space-between;
   background-color: #EAEAEA;
 }
-.user div:first-child{
-  display: flex;
-}
+
 .user span:nth-last-child(1){
   display: flex;
   align-items: center;
@@ -91,9 +95,7 @@ main{
   text-decoration: underline;
   cursor: pointer;
 }
-.notice div:first-child{
-  display: flex;
-}
+
 /* ///////// */
 .search-container{
   width: 100%;
@@ -125,7 +127,7 @@ main{
 /* dynamically set contacts */
 
 .all-contacts{
-  overflow-y: auto; /*DA SISTEMARE L'OVERFLOW*/
+  overflow-y: scroll; /*DA SISTEMARE L'OVERFLOW*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -147,37 +149,87 @@ main{
   flex-direction: column;
   margin-left: 15px;
 }
-.contact h4{
+.contact h4, .main-avatar h4{
   font-weight: 600;
 }
-.contact p{
-  color: #B1B1B1;
+.contact p, .main-avatar p{
+  color: #8A8F91;
   font-size: 14px;
 }
 .contact span{
   position: absolute;
   right: 5px;
-  color: #B1B1B1;
+  color: #8A8F91;
   font-size: 12px;
   font-weight: 600;
 }
 
 /* ////side container rules////// */
 
-
-
-
-
-
-
-
-
-
 /* container ruless */
 .container{
   background-color: white;
   width: 50%;
+  height: 100%;
   max-width: 750px;
   min-width: 550px;
   border: 1px solid #D5D5D4;
+}
+.main-avatar {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #EAEAEA;
+}
+.main-avatar img{
+  margin-left: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+.main-avatar div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.main-avatar span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.main-avatar span i{
+  color: #B1B1B1;
+  margin: 0 5px;
+  cursor: pointer;
+}
+/* main chat */
+
+.main-chat{
+  overflow-y: scroll; /* da sistemare*/
+  width: 100%;
+  height: calc(100% - 100px);
+  background-image: url(/img/mine.jpg);
+}
+
+/* bottom-chat-bar */
+
+.bottom-chat-bar{
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F3EEEA;
+  font-size: 20px;
+  text-align: center;
+}
+.bottom-chat-bar span{
+  color: #6B7376;
+  cursor: pointer;
+  width: 50px;
+}
+.bottom-chat-bar input{
+  width: calc(100% - 100px);
+  border: none;
+  height: 80%;
+  border-radius: 5px;
 }
