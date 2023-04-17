@@ -5,6 +5,7 @@
 }
 
 body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 100vh;
   background: rgb(218,219,211);
   background: linear-gradient(0deg, rgba(218,219,211,1) 80%, rgba(0,150,136,1) 80%, rgba(0,150,136,1) 100%); 
@@ -24,16 +25,12 @@ main{
   width: 100%;
   height: 95%;
 }
+/* side container rules */
 .side-container{
   background-color: white;
   width: 30%;
   max-width: 450px;
-  border: 1px solid #D5D5D4;
-}
-.container{
-  background-color: white;
-  width: 50%;
-  max-width: 750px;
+  min-width: 340px;
   border: 1px solid #D5D5D4;
 }
 .utility{
@@ -50,7 +47,10 @@ main{
   justify-content: space-between;
   background-color: #EAEAEA;
 }
-.user span{
+.user div:first-child{
+  display: flex;
+}
+.user span:nth-last-child(1){
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -60,4 +60,65 @@ main{
   color: #B1B1B1;
   margin: 0 5px;
   cursor: pointer;
+}
+/* /////////////// */
+.notice{
+  height: 60px;
+  background-color: #8EDAFC;
+  display: flex;
+  align-items: center;
+}
+.notice i{
+  background-color: #F2FBFF;
+  color: #8EDAFC;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-left:15px;
+}
+.notice p{
+  font-weight: 600;
+  font-size: 13px;
+  margin-left: 5px;
+}
+.notice span{
+  font-size: 12px;
+  margin-left: 5px;
+  color: #8a8989;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.notice div:first-child{
+  display: flex;
+}
+/* ///////// */
+.search-container{
+  height: 40px;
+  background-color: #FAFAFA;
+  display: flex;
+  align-items: center;
+}
+.search-bar{
+  background-color: white;
+  border: .5px solid #F4F4F4;
+}
+.search-bar button{
+  background-color: white;
+  border: none;
+  width: 50px;
+}
+.search-bar input{
+  border: none;
+}
+
+/* ////side container rules////// */
+/* container ruless */
+.container{
+  background-color: white;
+  width: 50%;
+  max-width: 750px;
+  min-width: 550px;
+  border: 1px solid #D5D5D4;
 }
