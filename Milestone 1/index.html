@@ -67,7 +67,10 @@
 <!-- contacts -->
           <div class="all-contacts" v-for="(contact, i) in contacts">
 
-            <section class="contact">
+            <section 
+            @click="nowChat(contact, i)"
+            class="contact"
+            >
               <!-- dynamic contact img -->
               <img :src="contact.avatar" alt="user">
               <div>
@@ -89,9 +92,9 @@
           <section class="main-avatar">
             <!--user img -->
             <section class="flex">
-              <img src="/img/avatar_1.jpg" alt="user">
+              <img :src="src" alt="user">
               <div>
-                <h4>Michele</h4>
+                <h4>{{nome}}</h4>
                 <p>Ultimo accesso oggi alle 12:00</p>
               </div>
             </section>

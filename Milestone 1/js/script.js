@@ -167,8 +167,16 @@ createApp({
                 }
             ],
         }
-    ]
-    
+    ],
+    nome:'',
+    src:'',
+    }
+  },
+  methods:{
+    nowChat(contact,i){
+      this.nome = contact.name
+      this.src = contact.avatar
+      console.log(contact.avatar);
     }
   }
 }).mount('#app');
