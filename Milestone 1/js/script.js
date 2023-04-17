@@ -178,5 +178,12 @@ createApp({
       this.src = contact.avatar
       console.log(contact.avatar);
     }
+  },
+
+  mounted(){
+    /*  PROVA*/
+    this.nome = 'Michele'
+    this.src = '/img/avatar_1.jpg'
+    /*  PROVA*/
   }
 }).mount('#app');
