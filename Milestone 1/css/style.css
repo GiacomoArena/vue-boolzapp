@@ -121,7 +121,47 @@ main{
   border: none;
 }
 
+/* dynamically set contacts */
+
+.all-contacts{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.contact{
+  padding: 5px 0;
+  display: flex;
+  background-color: white;
+  border: 1px solid #EAEAEA;
+}
+.contact img{
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+.contact div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.contact span{
+  position: absolute;
+  right: 5px;
+
+}
+
 /* ////side container rules////// */
+
+
+
+
+
+
+
+
+
+
 /* container ruless */
 .container{
   background-color: white;

@@ -50,7 +50,7 @@
               </div>
 
             </section>
-
+<!-- search bar -->
             <section class="search-container">
 
               <div class="search-bar">
@@ -63,9 +63,27 @@
               </div>
             </section>
           </div>
+<!-- ////search bar -->
+<!-- contacts -->
+          <div class="all-contacts" v-for="(contact, i) in contacts">
+
+            <section class="contact">
+              <!--contact img -->
+              <img :src="contact.avatar" alt="user">
+              <div>
+                <h4>{{contact.name}}</h3>
+                <p>Ultimo messaggio inviato</p>
+              </div>
+
+              <span>
+                12:00
+              </span>
+            </section> 
+
+          </div>
 
         </div>
-  
+  <!-- //////// contacts ///////// -->
         <div class="container">
           gigio
         </div>
