@@ -27,6 +27,7 @@ main{
 }
 /* side container rules */
 .side-container{
+  height: 100%;
   background-color: white;
   width: 30%;
   max-width: 450px;
@@ -124,16 +125,17 @@ main{
 /* dynamically set contacts */
 
 .all-contacts{
+  overflow-y: auto; /*DA SISTEMARE L'OVERFLOW*/
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 .contact{
   padding: 5px 0;
   display: flex;
   background-color: white;
   border: 1px solid #EAEAEA;
+  cursor: pointer;
 }
 .contact img{
   width: 50px;
@@ -145,10 +147,19 @@ main{
   flex-direction: column;
   margin-left: 15px;
 }
+.contact h4{
+  font-weight: 600;
+}
+.contact p{
+  color: #B1B1B1;
+  font-size: 14px;
+}
 .contact span{
   position: absolute;
   right: 5px;
-
+  color: #B1B1B1;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 /* ////side container rules////// */
