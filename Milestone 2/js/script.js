@@ -178,28 +178,32 @@ createApp({
     ],
     nome:'',
     src:'',
-    messaggio: ''
+    chatMessagges:'' ,
+    currentMessages:[],
     }
     },
     methods:{
         nowChat(contact,i){
         /*PROVA*/
         contact.click = !contact.click
+
+        this.currentMessages = contact.messages
         /*PROVA*/
         this.nome = contact.name;
         this.src = contact.avatar;
-        this.messaggio = ''
-        this.getmessages(contact);
-
+       /* this.chatMessagges = ''
+        this.getmessages(contact);*/
         console.log(contact.click);
+        console.log(this.currentMessages);
         },
 
-        getmessages(contact){
+       /* getmessages(contact){
             for (let i = 0; i < contact.messages.length; i++) {
                 console.log(contact.messages[i].message);
-                this.messaggio += contact.messages[i].message
+                
+                this.chatMessagges += contact.messages[i].message
             }
-        },
+        },*/
     },
 
     

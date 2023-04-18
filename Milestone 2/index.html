@@ -108,10 +108,13 @@
           </section> 
 <!-- ////////////main chat/////////////// -->
           <section
+          
+
           class="main-chat" >
-            <div class="message">
+            <div class="message"
+            v-for="(messaggio, i) in currentMessages">
               <span>
-                {{messaggio}}
+                {{currentMessages[i].message}}
                 <p>
                   00:00
                 </p>
