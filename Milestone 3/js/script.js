@@ -176,6 +176,8 @@ createApp({
             ],
         }
     ],
+    search:'',
+    searchBox:[],
     nome:'',
     src:'',
     currentMessages:[],
@@ -220,10 +222,13 @@ createApp({
                         message: this.autoAnswer[0],
                         status: 'received',
                     };
-                    return this.currentMessages.push(message);
+                    setTimeout(() => {
+                        this.currentMessages.push(message);
+                    }, 1000);
+                    return this.currentMessages
                 }
             } 
-        }
+        },
     },
     
 
