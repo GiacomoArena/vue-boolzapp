@@ -222,8 +222,8 @@ main{
   padding: 30px;
 }
 .message{
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 8px;
+  margin-bottom: 15px;
 }
 .message span:first-child{
   position: relative;

@@ -194,7 +194,7 @@ createApp({
         console.log('visible',this.contacts.visible);
         },
 
-        add(contact,chatMsg){
+        add(){
             
             const message = {
                 date: '10/01/2020 15:51:00',
