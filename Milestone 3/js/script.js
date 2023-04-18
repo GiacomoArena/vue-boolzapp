@@ -208,9 +208,10 @@ createApp({
             this.autoMsg;
             
         },
-        /*randomNum(){
-            Math.flor(Math.random() * (3-1+1) +1);
-        },*/
+        randomNum(){
+          let random =  Math.floor(Math.random() * (3-1+1) +1);
+        return random
+        },
     },
 
     computed:{
@@ -219,7 +220,7 @@ createApp({
                 if (this.currentMessages.length +1 ) {
                     const message ={
                         date: '10/01/2020 15:51:00',
-                        message: this.autoAnswer[0],
+                        message: this.autoAnswer[this.randomNum()],
                         status: 'received',
                     };
                     setTimeout(() => {
@@ -234,6 +235,7 @@ createApp({
 
     mounted(){
         /*  PROVA*/
+        this.nowChat(this.contacts[0], 0)
         this.nome = this.contacts[0].name
         this.src = this.contacts[0].avatar
         /*  PROVA*/
