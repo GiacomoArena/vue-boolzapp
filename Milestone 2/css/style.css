@@ -12,7 +12,7 @@
 }
 .sent{
   float: right;
-  background-color:green  !important;
+  background-color:#D5F9BA !important;
 }
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -210,25 +210,26 @@ main{
 /* main chat */
 
 .main-chat{
-  overflow-y: scroll; /* da sistemare*/
+  overflow-y: auto;
   width: 100%;
   height: calc(100% - 100px);
   background-image: url(/img/mine.jpg);
   display: flex;
   flex-direction: column;
+  padding: 30px;
 }
 .message{
-  margin-top: 50px;
+  margin: 15px 0;
 }
 .message span:first-child{
   position: relative;
-  background-color: #EAEAEA;
+  background-color: #FFFF;
   padding: 15px;
-  margin-left: 50px;
-  padding-right: 100px;
+  padding-right: 60px;
   border-radius: 5px;
 }
 span p{
+  color: #B1B1B1;
   font-size: 12px;
   position: absolute;
   bottom: 5px;
