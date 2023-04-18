@@ -183,9 +183,8 @@ createApp({
     },
     methods:{
         nowChat(contact,i){
-        /*PROVA*/
         contact.click = !contact.click
-        /*PROVA*/
+        
         this.currentMessages = contact.messages
         this.nome = contact.name;
         this.src = contact.avatar;
