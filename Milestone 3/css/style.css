@@ -131,14 +131,17 @@ main{
 }
 
 /* dynamically set contacts */
-
+section.fix{
+  overflow-y: auto;
+  max-height: calc(100% - 150px);
+}
 .all-contacts{
-  overflow-y: scroll; /*DA SISTEMARE L'OVERFLOW*/
+  /*DA SISTEMARE L'OVERFLOW*/
   position: relative;
   display: flex;
   flex-direction: column;
 }
-.contact{
+.contact{ 
   padding: 5px 0;
   display: flex;
   border: 1px solid #EAEAEA;
