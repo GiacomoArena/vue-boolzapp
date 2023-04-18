@@ -3,9 +3,9 @@
 const {createApp} = Vue;
 
 createApp({
-  data(){
+    data(){
     return{
-      contacts: [
+        contacts: [
         {
             name: 'Michele',
             avatar: '/img/avatar_1.jpg',
@@ -178,24 +178,36 @@ createApp({
     ],
     nome:'',
     src:'',
+    messaggio: ''
     }
-  },
-  methods:{
-    nowChat(contact,i){
-      /*PROVA*/
-      contact.click = !contact.click
-      /*PROVA*/
-      this.nome = contact.name;
-      this.src = contact.avatar;
-      console.log(contact.click);
-      console.log(contact.messages[0].message);
-    }
-  },
+    },
+    methods:{
+        nowChat(contact,i){
+        /*PROVA*/
+        contact.click = !contact.click
+        /*PROVA*/
+        this.nome = contact.name;
+        this.src = contact.avatar;
+        this.messaggio = ''
+        this.getmessages(contact);
 
-  mounted(){
-    /*  PROVA*/
-    this.nome = 'Michele'
-    this.src = '/img/avatar_1.jpg'
-    /*  PROVA*/
-  }
+        console.log(contact.click);
+        },
+
+        getmessages(contact){
+            for (let i = 0; i < contact.messages.length; i++) {
+                console.log(contact.messages[i].message);
+                this.messaggio += contact.messages[i].message
+            }
+        },
+    },
+
+    
+
+    mounted(){
+        /*  PROVA*/
+        this.nome = 'Michele'
+        this.src = '/img/avatar_1.jpg'
+        /*  PROVA*/
+    }
 }).mount('#app');

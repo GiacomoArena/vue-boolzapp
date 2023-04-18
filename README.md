@@ -25,3 +25,7 @@ nowChat(contact,i){
       console.log(contact.avatar);
     }
 ```
+
+
+## **Milestone 1**  
+- 
