@@ -212,6 +212,16 @@ createApp({
           let random =  Math.floor(Math.random() * (3-1+1) +1);
         return random
         },
+        searchbox(){
+            this.searchBox=[];
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    this.searchBox.push(element)
+                }
+            });
+            console.log(this.searchBox);
+            this.search=''
+        },
     },
 
     computed:{
@@ -230,6 +240,7 @@ createApp({
                 }
             } 
         },
+    
     },
     
 
