@@ -180,6 +180,7 @@ createApp({
     src:'',
     currentMessages:[],
     newMessage: '',
+    
     }
     },
     methods:{
@@ -202,12 +203,26 @@ createApp({
                 status: 'sent'
             };
             this.currentMessages.push(message);
-
             this.newMessage = '';
+            this.autoMsg;
+            
+
             
         }
     },
 
+    computed:{
+        autoMsg(){
+            if (this.currentMessages.length +1 ) {
+                const message ={
+                    date: '10/01/2020 15:51:00',
+                    message: "ok",
+                    status: 'received',
+                };
+                return this.currentMessages.push(message);
+            }
+        }
+    },
     
 
     mounted(){
