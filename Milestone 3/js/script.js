@@ -180,14 +180,14 @@ createApp({
     src:'',
     currentMessages:[],
     newMessage: '',
-    
+    autoAnswer:['ok','scusami ma al momento non posso rispondere', 'che fai?', 'come stai?'],
     }
     },
     methods:{
         nowChat(contact,i){
-            /* DA SISTEMARE */
+            /* TO FIX */
         contact.click = !contact.click
-            /* DA SISTEMARE */
+            /* FIX */
         this.currentMessages = contact.messages
         this.nome = contact.name;
         this.src = contact.avatar;
@@ -196,7 +196,6 @@ createApp({
         },
 
         add(){
-            
             const message = {
                 date: '10/01/2020 15:51:00',
                 message: this.newMessage,
@@ -206,29 +205,32 @@ createApp({
             this.newMessage = '';
             this.autoMsg;
             
-
-            
-        }
+        },
+        /*randomNum(){
+            Math.flor(Math.random() * (3-1+1) +1);
+        },*/
     },
 
     computed:{
         autoMsg(){
-            if (this.currentMessages.length +1 ) {
-                const message ={
-                    date: '10/01/2020 15:51:00',
-                    message: "ok",
-                    status: 'received',
-                };
-                return this.currentMessages.push(message);
-            }
+            for (let i = 0; i < this.autoAnswer.length; i++) {
+                if (this.currentMessages.length +1 ) {
+                    const message ={
+                        date: '10/01/2020 15:51:00',
+                        message: this.autoAnswer[0],
+                        status: 'received',
+                    };
+                    return this.currentMessages.push(message);
+                }
+            } 
         }
     },
     
 
     mounted(){
         /*  PROVA*/
-        this.nome = 'Michele'
-        this.src = '/img/avatar_1.jpg'
+        this.nome = this.contacts[0].name
+        this.src = this.contacts[0].avatar
         /*  PROVA*/
     }
 }).mount('#app');

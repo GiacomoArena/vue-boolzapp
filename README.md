@@ -54,3 +54,35 @@ methods:{
 ```
 
 - I make the last changes in css to make the chat more like the original
+
+## **Milestone 3** 
+- On the input bar I put an 
+v-model="newMessage" '@keyup.enter="add()"' with the following function that creates me a message object similar to the initial contacts object that will be later pushed inside the empty array currentMessages
+```
+add(){
+            const message = {
+                date: '10/01/2020 15:51:00',
+                message: this.newMessage,
+                status: 'sent'
+            };
+            this.currentMessages.push(message);
+            this.newMessage = '';
+            this.autoMsg;
+```
+- for the automatic response I created on computed: a function that as soon as it notices a difference in the length of currentMessages it also creates an object with a pre-set message that will be pushed always inside currentMessages
+```
+computed:{
+        autoMsg(){
+            for (let i = 0; i < this.autoAnswer.length; i++) {
+                if (this.currentMessages.length +1 ) {
+                    const message ={
+                        date: '10/01/2020 15:51:00',
+                        message: this.autoAnswer[0],
+                        status: 'received',
+                    };
+                    return this.currentMessages.push(message);
+                }
+            } 
+        }
+    },
+```
