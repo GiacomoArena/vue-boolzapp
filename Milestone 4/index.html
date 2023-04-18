@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- fontawesome -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
+    <!-- Vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- style  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Boolzapp </title>
+  </head>
+  <body>
+
+    <main id="app"> 
+      <!-- main wrapper  -->
+      <section class="wrapper">
+
+        <div class="side-container">
+          <!-- container of user, notification bar and search bar -->
+          <div class="utility">
+
+            <section class="user">
+              <!--user img -->
+              <div class="flex">
+                <img src="/img/avatar_io.jpg" alt="user">
+                <span>Sofia</span>
+              </div>
+
+              <span>
+                <i class="fa-solid fa-circle-notch"></i>
+                <i class="fa-solid fa-message"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+            </section> 
+
+            <section class="notice">
+
+              <i class="fa-solid fa-bell-slash"></i>
+              <div>
+                <p>
+                  Ricevi notifiche di nuovi messaggi 
+                </p>
+                <span>
+                  Atttiva notifiche desktop
+                </span>
+              </div>
+
+            </section>
+<!-- search bar -->
+            <section class="search-container">
+
+              <div class="search-bar">
+
+                <button type="submit">
+                  <i class="fa fa-search"></i>
+                </button>
+
+                <input class="search" type="text"
+                v-model="search" 
+                placeholder="Cerca o inizia una nuova chat" name="search"
+                @keyup.enter="searchbox()">
+                
+              </div>
+            </section>
+          </div>
+<!-- ////search bar -->
+<!-- contacts -->
+        <section class="fix">
+          <div class="all-contacts" v-for="(contact, i) in contacts">
+
+            <section 
+            @click="nowChat(contact, i)"
+            class="contact"
+            >
+            <!-- :class="{clicked: contact.click }" da risolvere bug -->
+              <!-- dynamic contact img -->
+              <img :src="contact.avatar" alt="user">
+              <div>
+                <h4>{{contact.name}}</h4>
+                <p>Ultimo messaggio inviato</p>
+              </div>
+              <!-- last message clock -->
+              <span>
+                12:00
+              </span>
+            </section> 
+ <!-- //////dynamic contact img//////// -->
+          </div>
+        </section>
+        </div>
+  <!-- //////// contacts ///////// -->
+        <div class="container" >
+          
+          <section class="main-avatar">
+            <!--user img -->
+            <section class="flex">
+              <img :src="src" alt="user">
+              <div>
+                <h4>{{nome}}</h4>
+                <p>Ultimo accesso oggi alle 12:00</p>
+              </div>
+            </section>
+            
+            <span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </span>
+          </section> 
+<!-- ////////////main chat/////////////// -->
+          <section
+          
+
+          class="main-chat" >
+            <div class="message"
+            v-for="chatMsg in currentMessages">
+              <span :class="{sent: chatMsg.status === 'sent'}">
+                {{chatMsg.message}}
+                <p>
+                  00:00
+                </p>
+              </span>
+            </div>
+          </section>
+<!-- ////////////main chat/////////////// -->
+
+<!-- //////////bottom bar////////// -->
+          <section class="bottom-chat-bar">
+
+            <span>
+              <i class="fa-regular fa-face-smile"></i>
+            </span>
+
+            <input 
+            @keyup.enter="add()"
+            v-model="newMessage"
+            type="text"
+            placeholder="Scrivi un messaggio ">
+
+            <span>
+              <i class="fa-solid fa-microphone"></i>
+            </span>
+
+          </section>
+        </div>
+
+        
+
+      </section>
+      
+      
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
