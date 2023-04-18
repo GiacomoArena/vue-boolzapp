@@ -176,6 +176,7 @@ createApp({
             ],
         }
     ],
+    filteredContacts: [],
     search:'',
     searchBox:[],
     nome:'',
@@ -212,16 +213,8 @@ createApp({
           let random =  Math.floor(Math.random() * (3-1+1) +1);
         return random
         },
-        searchbox(){
-            this.searchBox=[];
-            this.contacts.forEach(element => {
-                if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
-                    this.searchBox.push(element)
-                }
-            });
-            console.log(this.searchBox);
-            this.search=''
-        },
+
+        
     },
 
     computed:{
@@ -240,11 +233,30 @@ createApp({
                 }
             } 
         },
-    
+        
+        searchbox(){
+            this.searchBox=[];
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    this.searchBox.push(element)
+                }
+            });
+            
+            
+            if(this.searchBox.length != 0){
+                
+                this.filteredContacts = this.searchBox;
+            }
+            else{
+                this.filteredContacts = this.contacts;
+            }
+            console.log(this.filteredContacts);
+        },
     },
     
 
     mounted(){
+        this.filteredContacts = this.contacts
         /*  PROVA*/
         this.nowChat(this.contacts[0], 0)
         this.nome = this.contacts[0].name

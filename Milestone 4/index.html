@@ -62,15 +62,16 @@
                 <input class="search" type="text"
                 v-model="search" 
                 placeholder="Cerca o inizia una nuova chat" name="search"
-                @keyup.enter="searchbox()">
+                >
                 
               </div>
+              {{searchbox}}
             </section>
           </div>
 <!-- ////search bar -->
 <!-- contacts -->
         <section class="fix">
-          <div class="all-contacts" v-for="(contact, i) in contacts">
+          <div class="all-contacts" v-for="(contact, i) in filteredContacts">
 
             <section 
             @click="nowChat(contact, i)"
