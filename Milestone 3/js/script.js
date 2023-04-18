@@ -194,7 +194,18 @@ createApp({
         console.log('visible',this.contacts.visible);
         },
 
-        
+        add(contact,chatMsg){
+            
+            const message = {
+                date: '10/01/2020 15:51:00',
+                message: this.newMessage,
+                status: 'sent'
+            };
+            this.currentMessages.push(message);
+
+            this.newMessage = '';
+            
+        }
     },
 
     
