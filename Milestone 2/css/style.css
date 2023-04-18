@@ -10,6 +10,10 @@
 .clicked{
   background-color: #d308c9;
 }
+.sent{
+  float: right;
+  background-color:green  !important;
+}
 body{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 100vh;

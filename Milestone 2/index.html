@@ -113,7 +113,7 @@
           class="main-chat" >
             <div class="message"
             v-for="chatMsg in currentMessages">
-              <span>
+              <span :class="{sent: chatMsg.status === 'sent'}">
                 {{chatMsg.message}}
                 <p>
                   00:00
