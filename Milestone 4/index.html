@@ -115,15 +115,22 @@
           </section> 
 <!-- ////////////main chat/////////////// -->
           <section
-          
-
           class="main-chat" >
             <div class="message"
             v-for="chatMsg in currentMessages">
               <span :class="{sent: chatMsg.status === 'sent'}">
                 {{chatMsg.message}}
-                  <i class="fa-solid fa-chevron-down chevron"></i>
-                <p>
+                  <i 
+                  @click="visible(chatMsg)"
+                  class="fa-solid fa-chevron-down chevron"></i>
+                  <div 
+                  class="none"
+                  :class="{chatInfo: chatMsg.flag === true}"
+                  @click="canc()">
+                    <h5>Message Info</h5>
+                    <h5>Delete Message</h5>
+                  </div>
+                <p class="msgClock">
                   00:00
                 </p>
               </span>

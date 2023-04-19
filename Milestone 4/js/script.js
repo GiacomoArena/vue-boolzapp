@@ -9,6 +9,7 @@ createApp({
         {
             name: 'Michele',
             avatar: '/img/avatar_1.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
@@ -24,13 +25,15 @@ createApp({
                 {
                     date: '10/01/2020 16:15:22',
                     message: 'Tutto fatto!',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 }
             ],
         },
         {
             name: 'Fabio',
             avatar: '/img/avatar_2.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
@@ -41,7 +44,8 @@ createApp({
                 {
                     date: '20/03/2020 16:30:55',
                     message: 'Bene grazie! Stasera ci vediamo?',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 },
                 {
                     date: '20/03/2020 16:35:00',
@@ -53,12 +57,14 @@ createApp({
         {
             name: 'Samuele',
             avatar: '/img/avatar_3.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
                     date: '28/03/2020 10:10:40',
                     message: 'La Marianna va in campagna',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 },
                 {
                     date: '28/03/2020 10:20:10',
@@ -68,13 +74,15 @@ createApp({
                 {
                     date: '28/03/2020 16:15:22',
                     message: 'Ah scusa!',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 }
             ],
         },
         {
             name: 'Alessandro B.',
             avatar: '/img/avatar_4.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
@@ -85,13 +93,15 @@ createApp({
                 {
                     date: '10/01/2020 15:50:00',
                     message: 'Si, ma preferirei andare al cinema',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 }
             ],
         },
         {
             name: 'Alessandro L.',
             avatar: '/img/avatar_5.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
@@ -102,13 +112,15 @@ createApp({
                 {
                     date: '10/01/2020 15:50:00',
                     message: 'Va bene, stasera la sento',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 }
             ],
         },
         {
             name: 'Claudia',
             avatar: '/img/avatar_6.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
@@ -119,7 +131,8 @@ createApp({
                 {
                     date: '10/01/2020 15:50:00',
                     message: 'Non ancora',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 },
                 {
                     date: '10/01/2020 15:51:00',
@@ -131,6 +144,7 @@ createApp({
         {
             name: 'Federico',
             avatar: '/img/avatar_7.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
@@ -141,19 +155,22 @@ createApp({
                 {
                     date: '10/01/2020 15:50:00',
                     message: 'Grazie per avermelo ricordato, le scrivo subito!',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 }
             ],
         },
         {
             name: 'Davide',
             avatar: '/img/avatar_8.jpg',
+            visible: false,
             click: false,
             messages: [
                 {
                     date: '10/01/2020 15:30:55',
                     message: 'Ciao, andiamo a mangiare la pizza stasera?',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 },
                 {
                     date: '10/01/2020 15:50:00',
@@ -163,7 +180,8 @@ createApp({
                 {
                     date: '10/01/2020 15:51:00',
                     message: 'OK!!',
-                    status: 'received'
+                    status: 'received',
+                    flag:false,
                 }
             ],
         }
@@ -206,7 +224,11 @@ createApp({
         return random
         },
 
-        
+        visible(chatMsg){
+            chatMsg.flag = !chatMsg.flag;
+            console.log(this.flag);
+            console.log(this.currentMessages);
+        }
     },
 
     computed:{
@@ -217,6 +239,7 @@ createApp({
                         date: '10/01/2020 15:51:00',
                         message: this.autoAnswer[this.randomNum()],
                         status: 'received',
+                        flag:false,
                     };
                     setTimeout(() => {
                         this.currentMessages.push(message);
