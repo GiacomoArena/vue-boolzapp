@@ -242,6 +242,16 @@ span p{
   bottom: 5px;
   right: 10px;
 }
+span i.chevron{
+  position: absolute;
+  right: 6px;
+  top: 3px;
+  font-size: 15px;
+  opacity: 0;
+}
+  span:hover i.chevron{
+  opacity: 1;
+}
 
 /* bottom-chat-bar */
 
