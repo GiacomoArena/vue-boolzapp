@@ -197,7 +197,6 @@ createApp({
             ],
         }
     ],
-    deletedBox:[],
     filteredContacts: [],
     search:'',
     searchBox:[],

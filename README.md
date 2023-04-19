@@ -86,3 +86,27 @@ computed:{
         }
     },
 ```
+
+## **Milestone 4**
+- for the operation of the search bar I created a ```v-model="search"``` where "search" will initially be = ' ' then 
+a function placed on computed: which initially cycles me with a for each contacts and checks via a function if the cycled element is included inside "search" (after the user has entered) so as to push it inside ```searchBox:[],```
+```
+searchbox(){
+            this.searchBox=[];
+            this.contacts.forEach(element => {
+                if (element.name.toLowerCase().includes(this.search.toLowerCase())) {
+                    this.searchBox.push(element)
+                }
+            });
+```
+- I create ```filteredContacts: []``` which on mounted() when the page starts will be equal to ```this.filteredContacts = this.contacts``` , then always inside the searchbox function inside computed: I create another condition that if ```searchBox.length != 0 ```so if it is full ```then ```filteredContacts = searchBox ```else ```filteredContacts = contacts
+
+```
+if(this.searchBox.length != 0){
+                
+                this.filteredContacts = this.searchBox;
+            }
+            else{
+                this.filteredContacts = this.contacts;
+            }
+```
