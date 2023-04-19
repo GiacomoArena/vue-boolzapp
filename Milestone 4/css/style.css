@@ -3,7 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.none{
+  display: none;
+  background-color: red;
+}
+.d-none{
+  display: none;
+}
 .flex{
   display: flex;
 }
@@ -255,9 +261,7 @@ span i.chevron{
   i.chevron:hover{
     opacity: 1;
 }
-  .none{
-    display: none;
-  }
+  
 .chatInfo{
   position: absolute;
   right: -21px;

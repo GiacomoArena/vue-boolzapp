@@ -27,6 +27,7 @@ createApp({
                     message: 'Tutto fatto!',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 }
             ],
         },
@@ -46,6 +47,7 @@ createApp({
                     message: 'Bene grazie! Stasera ci vediamo?',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 },
                 {
                     date: '16:35',
@@ -65,6 +67,7 @@ createApp({
                     message: 'La Marianna va in campagna',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 },
                 {
                     date: '10:20',
@@ -76,6 +79,7 @@ createApp({
                     message: 'Ah scusa!',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 }
             ],
         },
@@ -95,6 +99,7 @@ createApp({
                     message: 'Si, ma preferirei andare al cinema',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 }
             ],
         },
@@ -114,6 +119,7 @@ createApp({
                     message: 'Va bene, stasera la sento',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 }
             ],
         },
@@ -133,6 +139,7 @@ createApp({
                     message: 'Non ancora',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 },
                 {
                     date: '15:51',
@@ -157,6 +164,7 @@ createApp({
                     message: 'Grazie per avermelo ricordato, le scrivo subito!',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 }
             ],
         },
@@ -171,6 +179,7 @@ createApp({
                     message: 'Ciao, andiamo a mangiare la pizza stasera?',
                     status: 'received',
                     flag:false,
+                    cancFlag :false,
                 },
                 {
                     date: '15:50',
@@ -182,10 +191,12 @@ createApp({
                     message: 'OK!!',
                     status: 'received',
                     flag:false,
+                    cancFlag :'false',
                 }
             ],
         }
     ],
+    deletedBox:[],
     filteredContacts: [],
     search:'',
     searchBox:[],
@@ -227,10 +238,10 @@ createApp({
         visible(chatMsg){
             chatMsg.flag = !chatMsg.flag;
         },
-        canc(){
-            
-            console.log(this.currentMessages[this.currentMessages.length -1] = '' );
-        }
+        canc(chatMsg){
+            chatMsg.cancFlag = true
+            console.log( this.cancFlag)
+        },
     },
 
     computed:{
@@ -242,6 +253,7 @@ createApp({
                         message: this.autoAnswer[this.randomNum()],
                         status: 'received',
                         flag:false,
+                        cancFlag :false,
                     };
                     setTimeout(() => {
                         this.currentMessages.push(message);
