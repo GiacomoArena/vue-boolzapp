@@ -1,6 +1,7 @@
 
-
 const {createApp} = Vue;
+
+const dt = luxon.DateTime;
 
 createApp({
     data(){
@@ -221,7 +222,7 @@ createApp({
 
         add(){
             const message = {
-                date: '15:51',
+                date: dt.now().toLocaleString(dt.TIME_24_SIMPLE),
                 message: this.newMessage,
                 status: 'sent'
             };
@@ -240,7 +241,6 @@ createApp({
         },
         canc(chatMsg){
             chatMsg.cancFlag = true
-            console.log( this.cancFlag)
         },
     },
 
@@ -249,7 +249,7 @@ createApp({
             for (let i = 0; i < this.autoAnswer.length; i++) {
                 if (this.currentMessages.length +1 ) {
                     const message ={
-                        date: '15:51',
+                        date: dt.now().toLocaleString(dt.TIME_24_SIMPLE),
                         message: this.autoAnswer[this.randomNum()],
                         status: 'received',
                         flag:false,
@@ -285,6 +285,7 @@ createApp({
     
 
     mounted(){
+        console.log(dt.now().toLocaleString(dt.TIME_24_SIMPLE));
         this.filteredContacts = this.contacts
         /*  PROVA*/
         this.nowChat(this.contacts[0], 0)

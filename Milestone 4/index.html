@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js' integrity='sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==' crossorigin='anonymous'></script>
       <!-- fontawesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' integrity='sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==' crossorigin='anonymous'/>
     <!-- Vue -->
@@ -11,6 +12,7 @@
 
     <!-- style  -->
     <link rel="stylesheet" href="css/style.css">
+  <!-- title -->
     <title>Boolzapp </title>
     <link rel="icon" href="/img/Boolean.ico">
   </head>
@@ -87,7 +89,7 @@
               </div>
               <!-- last message clock -->
               <span>
-                12:00
+                {{contact.messages[contact.messages.length-1].date}}
               </span>
             </section> 
  <!-- //////dynamic contact img//////// -->
