@@ -126,12 +126,14 @@
                   <div 
                   class="none"
                   :class="{chatInfo: chatMsg.flag === true}"
-                  @click="canc()">
+                  >
                     <h5>Message Info</h5>
-                    <h5>Delete Message</h5>
+                    <h5 @click="canc()">
+                      Delete Message
+                    </h5>
                   </div>
                 <p class="msgClock">
-                  00:00
+                  {{chatMsg.date}}
                 </p>
               </span>
             </div>
