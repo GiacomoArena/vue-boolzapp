@@ -110,3 +110,12 @@ if(this.searchBox.length != 0){
                 this.filteredContacts = this.contacts;
             }
 ```
+## **Milestone 5**
+- Regarding message deletion, I created on CSS a box containing the text Info and Message.
+I create on the chevron an event that on click triggers the ```visible()``` function that simply changes the value of a flag that at the moment it is 'true' the box will be visible otherwise not.
+```
+visible(chatMsg){
+            chatMsg.flag = !chatMsg.flag;
+        },
+```
+- I create the ```delete()``` function which also changes the value of another flag from false to true (both flags are inside``` messages[{}]``` ) on the HTML inside 'main chat ' in the div I create the dynamic class 'none' which will give display none in case the flag is true. ```:class="{chatInfo: chatMsg.flag == true}"```
