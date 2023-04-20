@@ -9,7 +9,7 @@ createApp({
         contacts: [
         {
             name: 'Michele',
-            avatar: '/img/avatar_1.jpg',
+            avatar: '../img/avatar_1.jpg',
             visible: false,
             click: false,
             messages: [
@@ -34,7 +34,7 @@ createApp({
         },
         {
             name: 'Fabio',
-            avatar: '/img/avatar_2.jpg',
+            avatar: '../img/avatar_2.jpg',
             visible: false,
             click: false,
             messages: [
@@ -59,7 +59,7 @@ createApp({
         },
         {
             name: 'Samuele',
-            avatar: '/img/avatar_3.jpg',
+            avatar: '../img/avatar_3.jpg',
             visible: false,
             click: false,
             messages: [
@@ -86,7 +86,7 @@ createApp({
         },
         {
             name: 'Alessandro B.',
-            avatar: '/img/avatar_4.jpg',
+            avatar: '../img/avatar_4.jpg',
             visible: false,
             click: false,
             messages: [
@@ -106,7 +106,7 @@ createApp({
         },
         {
             name: 'Alessandro L.',
-            avatar: '/img/avatar_5.jpg',
+            avatar: '../img/avatar_5.jpg',
             visible: false,
             click: false,
             messages: [
@@ -126,7 +126,7 @@ createApp({
         },
         {
             name: 'Claudia',
-            avatar: '/img/avatar_6.jpg',
+            avatar: '../img/avatar_6.jpg',
             visible: false,
             click: false,
             messages: [
@@ -151,7 +151,7 @@ createApp({
         },
         {
             name: 'Federico',
-            avatar: '/img/avatar_7.jpg',
+            avatar: '../img/avatar_7.jpg',
             visible: false,
             click: false,
             messages: [
@@ -171,7 +171,7 @@ createApp({
         },
         {
             name: 'Davide',
-            avatar: '/img/avatar_8.jpg',
+            avatar: '../img/avatar_8.jpg',
             visible: false,
             click: false,
             messages: [
